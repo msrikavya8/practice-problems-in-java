@@ -1,0 +1,29 @@
+import java.util.Scanner;                        //find the length of longest sub with sum<=k
+public class SlidingWindow{
+   public static void main(String[] args){       //ind the length of longest sub with k
+      Scanner sc =new Scanner(System.in);
+      int n = sc.nextInt();
+     int[] arr = new int[n];
+   for(int i=0; i<n; i++){
+   arr[i]= sc.nextInt();
+} 
+int k = sc.nextInt();
+int sum = 0,count=0,i,j;
+for(i=0;i<n;i++){                       
+  for(j=i; j<n;j++){
+   sum=sum + arr[j]; 
+   if(sum>k)
+        break;
+      count++;
+   }
+   if(count>max){
+       max=count;
+     }
+  }
+System.out.println(count);
+  }
+ }
+
+
+
+
